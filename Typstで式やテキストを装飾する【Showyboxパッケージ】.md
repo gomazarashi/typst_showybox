@@ -15,4 +15,69 @@
 #import "@preview/showybox:2.0.1"
 ```
 
+# 基本的な記述
+
+showyboxパッケージを利用する際は、基本的に次のように記述します。
+    
+```typ
+showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
+```
+
+このように記述すると、次のように表示されます。見やすさのために改行を行っています。
+
+![basic_useage](./images/basic_useage.png)
+
+記法としては、`#showybox()[]`で`showybox`関数を呼び出し、丸括弧`()`に各種パラメーター、角括弧`[]`に装飾したいテキスト等を記述する、という形になります。
+デフォルトでは上記のような、
+- No title (タイトルなし)
+- No shadow (影なし)
+- Not breakable (ページおよびコンテナの終端での改行なし)
+- Black borders (黒い枠線)
+- White background (白い背景)
+- 5pt of border radius (角丸の半径5pt)
+- 1pt of border thickness (枠線の太さ1pt)
+
+というパラメーターが設定されています。
+
+# パラメーター
+バージョン`2.0.1`では、次のパラメーターが利用可能です。
+- title
+- footer
+- frame
+- title-style
+- body-style
+- footer-style
+- sep
+- shadow
+- width
+- align
+- breakable
+- spacing
+- above
+- below
+
+## タイトル(title)
+`title`パラメーターを利用することで、showyboxのタイトルを設定することができます。
+
+```typ
+#showybox(title:"これはタイトルです")[これは本文です]
+```
+
+![title](./images/title.png)
+
+タイトルに設定できるのは[str(文字列)](https://typst.app/docs/reference/foundations/str/)と[content(コンテンツ)](https://typst.app/docs/reference/foundations/content/)です。何も設定しなかった場合(デフォルト)は`""`(空文字列)が設定されます。
+
+## フッター(footer)
+`footer`パラメーターを利用することで、showyboxのフッターを設定することができます。
+
+```typ
+#showybox(title:"これはタイトルです",footer:"これはフッターです")[これは本文です]
+```
+
+![footer](./images/footer.png)
+
+こちらもタイトルと同様、設定できるのは`str`と`content`です。何も設定しなかった場合(デフォルト)は`""`(空文字列)が設定されます。
+
+
+
 
