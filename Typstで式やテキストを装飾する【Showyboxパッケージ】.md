@@ -211,3 +211,71 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 
 ### boxed-style
 このプロパティが`None`でない場合(すなわち辞書型の場合)、タイトルはfloating boxとして、本文の上部に表示されます。詳細は後述します。
+
+## Boxed style
+`boxed-style`で指定できるのは次のプロパティです。
+
+- anchor
+- offset
+- radius
+
+### anchor
+`anchor`は、boxedtitle のアンカーをどこに配置するかを示す、キー`x`と`y`を持つ辞書型の値です。各方向の値の一覧は以下の通りです：
+
+x方向のアンカー:
+
+`left`: boxed-title の左側にアンカーを設定する。
+`center`: boxed-title の水平中央にアンカーを設定する。
+`right`: boxed-title の右側にアンカーを設定する。
+y方向のアンカー:
+
+`top`: boxed-title の上部にアンカーを設定する。
+`horizon`: boxed-title の垂直中央にアンカーを設定する。
+`bottom`: boxed-title の下部にアンカーを設定する。
+デフォルトは `(x: left, y: horizon)` です。
+
+### offset
+`offset`はキー `x` と `y` を持つ辞書型の値で、boxed-title の x方向およびy方向へのオフセット量を指定します。 デフォルトは` (x: 0pt, y: 0pt)` です。
+
+### radius
+`radius`は、boxed-title の角丸の半径を指定します。デフォルトは `5pt` です。辞書型として設定した場合、`top-left`, `top-right`, `bottom-left`, `bottom-right` の各角に異なる半径を設定することができます。
+
+```typ
+#showybox(
+  title-style: (boxed-style: (anchor: (x: center, y: horizon), radius: (top-left: 10pt, bottom-right: 10pt, rest: 0pt))),
+  frame: (
+    title-color: green.darken(40%),
+    body-color: green.lighten(80%),
+    footer-color: green.lighten(60%),
+    border-color: green.darken(60%),
+    radius: (top-left: 10pt, bottom-right: 10pt, rest: 0pt),
+  ),
+  title: "ラプラス変換",
+)[
+  実数$t gt.eq 0$について定義された関数$f(t)$のラプラス変換とは
+  $ F(s)=integral_0^oo f(t)e^(-s t) dif t $
+  で定義される$s$の関数$F(s)$のことである。
+]
+```
+
+![boxed_style](./images/boxed_style.png)
+
+## Body style
+このパラメータには、`showybox` の本文に対して一般的なスタイルのプロパティを設定するのに役立つすべてのオプションが含まれています。
+
+- color
+- align
+
+### color
+本文のテキストの色を指定します。デフォルトは`black`です。
+
+### align
+本文のテキストの配置を指定します。デフォルトは`"left"`です。
+
+## Footer style
+このパラメータには、`showybox` のフッターのプロパティを設定するのに役立つすべてのオプションが含まれています。これらのプロパティの一部は `footer` パラメータを設定する際に指定することもできますが、似たスタイルの複数の `showybox` を作成する際に特に便利です。
+
+- color
+- weight
+- align
+- sep-thickness

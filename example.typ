@@ -64,6 +64,25 @@
   $ I(E) = log 1/(P(E)) = -log P(E) $
 ]
 
+== Boxed Title
+#showybox(
+  title-style: (boxed-style: (anchor: (x: center, y: horizon), radius: (top-left: 10pt, bottom-right: 10pt, rest: 0pt))),
+  frame: (
+    title-color: green.darken(40%),
+    body-color: green.lighten(80%),
+    footer-color: green.lighten(60%),
+    border-color: green.darken(60%),
+    radius: (top-left: 10pt, bottom-right: 10pt, rest: 0pt),
+  ),
+  title: "ラプラス変換",
+)[
+  実数$t gt.eq 0$について定義された関数$f(t)$のラプラス変換とは
+  $ F(s)=integral_0^oo f(t)e^(-s t) dif t $
+  で定義される$s$の関数$F(s)$のことである。
+]
+
+
+
 
 
 
