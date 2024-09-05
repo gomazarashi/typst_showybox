@@ -174,3 +174,40 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 
 `title-inset`, `body-inset`, `footer-inset`の値を指定した場合は、これらのプロパティはそれぞれタイトル、本文、フッターの余白を個別に設定します。このとき、`inset` プロパティは無視され、個別のインセットが優先されます。
 
+## Title style
+`title-style`パラメーターは、タイトルのスタイルを指定します。指定できるプロパティは次の通りです。
+
+- color
+- weight
+- align
+- sep-thickness
+- boxed-style
+
+### color
+タイトルに用いるテキストの色を指定します。デフォルトは`white`です。
+
+### weight
+タイトルに用いるテキストの太さを指定します。指定できる値は`100`から`900`までの100刻み、または事前に定義されたキーワード("thin"、"extralight"、"light"、"regular"、"medium"、"semibold"、"bold"、
+"extrabold"、"black")です。デフォルトは`regular`です。 
+
+### align
+タイトルのテキストの配置を指定します。指定できる値は`"left"`(左寄せ)、`"center"`（中央寄せ）、`"right"`（右寄せ）です。デフォルトは`"left"`です。
+
+### sep-thickness
+タイトルと本文を分割する線の太さを指定します。デフォルトは`1pt`です。
+
+```typ
+#showybox(
+  title-style: (weight: 800, color: teal.darken(40%), sep-thickness: 0pt, align: center),
+  frame: (title-color: teal.lighten(80%), border-color: teal.darken(40%), thickness: (left: 2pt), radius: 0pt),
+  title: "自己情報量",
+)[
+  事象$E$が起こる確率を$P(E)$とするとき、事象$E$の自己情報量$I(E)$は次のように定義される。
+  $ I(E) = log 1/(P(E)) = -log P(E) $
+]
+```
+
+![title_style](./images/title_style.png)
+
+### boxed-style
+このプロパティが`None`でない場合(すなわち辞書型の場合)、タイトルはfloating boxとして、本文の上部に表示されます。詳細は後述します。

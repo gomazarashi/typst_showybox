@@ -54,6 +54,15 @@
 
 #showybox(title: "これはタイトルです", frame: (inset: 20pt), footer: "これはフッターです")[これは本文です]
 
+== Title Style
+#showybox(
+  title-style: (weight: 800, color: teal.darken(40%), sep-thickness: 0pt, align: center),
+  frame: (title-color: teal.lighten(80%), border-color: teal.darken(40%), thickness: (left: 2pt), radius: 0pt),
+  title: "自己情報量",
+)[
+  事象$E$が起こる確率を$P(E)$とするとき、事象$E$の自己情報量$I(E)$は次のように定義される。
+  $ I(E) = log 1/(P(E)) = -log P(E) $
+]
 
 
 
