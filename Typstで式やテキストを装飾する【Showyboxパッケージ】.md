@@ -323,5 +323,28 @@ y方向のアンカー:
 ### gutter
 セパレーターの上下の余白を指定します。デフォルトは`0.65em`です。
 
-```typ
+## Shadow properties
+`shadow`プロパティは、showyboxに影を付けるためのプロパティを指定します。このプロパティを指定しないか、あるいは`none`を指定した場合、影は設定されません。
 
+- color
+- offset
+
+### color
+影の色を指定します。デフォルトは`luma(128)`です。
+
+### offset
+影の位置のオフセットを相対的な長さ、あるいは`x`と`y`をキーとする辞書型で指定します。デフォルトは`4pt`です。
+
+```typ
+#showybox(
+  shadow: (color: aqua.lighten(55%), offset: 3pt),
+  frame: (title-color: blue.darken(30%), border-color: blue.darken(30%), body-color: aqua.lighten(80%)),
+  title: "ガウスの発散定理",
+  title-style: (weight: 600)
+)[
+  ガウスの発散定理は次のように表される。
+  $ integral_S bold(A) dot bold(n) dif S = integral_V nabla dot bold(A) dif V $
+]
+```
+
+![shadow](./images/shadow.png)
