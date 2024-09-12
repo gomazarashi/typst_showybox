@@ -307,3 +307,21 @@ y方向のアンカー:
 
 ![footer_style](./images/footer_style.png)
 
+## Separator properties (sep) 
+セパレータに関するプロパティを指定します。スパレーターの使い方は後述します。
+
+- thickness
+- dash
+- gutter
+
+### thickness
+`thickness`プロパティは、セパレーターの太さを指定します。デフォルトは`1pt`です。
+
+### dash
+`dash`プロパティは、セパレーターの破線の形状を指定します。デフォルトの値は `"solid"`(実線)です。
+
+### gutter
+セパレーターの上下の余白を指定します。デフォルトは`0.65em`です。
+
+```typ
+
