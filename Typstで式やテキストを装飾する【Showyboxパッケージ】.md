@@ -279,3 +279,31 @@ y方向のアンカー:
 - weight
 - align
 - sep-thickness
+
+### color
+フッターのテキストの色を指定します。デフォルトは`luma(85)`です。詳しくは[luma](https://typst.app/docs/reference/visualize/color/#definitions-luma)を参照してください。
+
+### weight
+フッターのテキストの太さを指定します。デフォルトは`regular`です。
+
+### align
+フッターのテキストの配置を指定します。デフォルトは`"left"`です。
+
+### sep-thickness
+フッターと本文を分割する線の太さを指定します。デフォルトは`1pt`です。
+
+```typ
+#showybox(
+  footer-style: (sep-thickness: 0pt, align: right, color: black),
+  title: "シグモイド関数",
+  footer: [
+    シグモイド関数はニューラルネットワークにおける活性化関数として広く用いられる。
+  ],
+)[
+  比較的単純な非線形関数であるシグモイド関数は、以下のように定義される。
+  $ phi(x) =sigma.alt_1(x) =1/(1+e^(-x)) =(tanh(x/2)+1)/2 $
+]
+```
+
+![footer_style](./images/footer_style.png)
+

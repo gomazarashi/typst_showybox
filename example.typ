@@ -81,6 +81,17 @@
   で定義される$s$の関数$F(s)$のことである。
 ]
 
+== Footer Style
+#showybox(
+  footer-style: (sep-thickness: 0pt, align: right, color: black),
+  title: "シグモイド関数",
+  footer: [
+    シグモイド関数はニューラルネットワークにおける活性化関数として広く用いられる。
+  ],
+)[
+  比較的単純な非線形関数であるシグモイド関数は、以下のように定義される。
+  $ phi(x) =sigma.alt_1(x) =1/(1+e^(-x)) =(tanh(x/2)+1)/2 $
+]
 
 
 
