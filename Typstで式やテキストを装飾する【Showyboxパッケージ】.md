@@ -25,7 +25,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 
 このように記述すると、次のように表示されます。見やすさのために改行を行っています。
 
-![basic_useage](./images/basic_useage.png)
+
+![basic_useage.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/be3e6a66-91a2-1227-8ffb-086420e4ec99.png)
+
 
 記法としては、`#showybox()[]`で`showybox`関数を呼び出し、丸括弧`()`に各種パラメーター、角括弧`[]`に装飾したいテキスト等を記述する、という形になります。
 デフォルトでは上記のような、
@@ -63,7 +65,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 #showybox(title:"これはタイトルです")[これは本文です]
 ```
 
-![title](./images/title.png)
+
+![title.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/d9e8723c-14ca-cbea-83a7-b287df98b8e7.png)
+
 
 タイトルに設定できるのは[str(文字列)](https://typst.app/docs/reference/foundations/str/)と[content(コンテンツ)](https://typst.app/docs/reference/foundations/content/)です。何も設定しなかった場合(デフォルト)は`""`(空文字列)が設定されます。
 
@@ -74,7 +78,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 #showybox(title:"これはタイトルです",footer:"これはフッターです")[これは本文です]
 ```
 
-![footer](./images/footer.png)
+
+![footer.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/764c9d13-c12b-bef6-dc25-1c629de516ae.png)
+
 
 こちらもタイトルと同様、設定できるのは`str`と`content`です。何も設定しなかった場合(デフォルト)は`""`(空文字列)が設定されます。
 
@@ -111,7 +117,8 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 ]
 ```
 
-![frame_color](./images/frame_color.png)
+
+![frame_color.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/3675f49e-4036-fd35-89b6-b0888d94c4b7.png)
 
 それぞれのプロパティは独立して指定できますが、ここでは見た目の統一感を出すためにあえて`olive`を基調としています。それに対して`lighten`メソッドを利用することで、それぞれの色を明るくしています。このような色の指定方法も、先程紹介した[color](https://typst.app/docs/reference/visualize/color/)のページが参考になると思います。
 
@@ -122,7 +129,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 #showybox(title: "これはタイトルです", frame: (radius: 10pt), footer: "これはフッターです")[これは本文です]
 ```
 
-![frame_radius](./images/frame_radius.png)
+
+![frame_radius.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/a7e10f75-de46-568a-9aaa-128dc1f3576e.png)
+
 
 値は`relative-length`や`dictionary`の形式で指定できます。
 
@@ -133,7 +142,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 #showybox(title: "これはタイトルです", frame: (thickness: 2pt), footer: "これはフッターです")[これは本文です]
 ```
 
-![frame_thickness](./images/frame_thickness.png)
+
+![frame_thickness.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/cff31aed-3988-4f79-7c60-fe863d3da2a1.png)
+
 
 こちらも`relative-length`や`dictionary`の形式で指定できます。`dictionary`の場合は、`top`, `bottom`, `left`, `right`, `x`, `y`, `rest`のプロパティを指定できます。
 ちなみに`box`内を分割している線(`separeaor`)の太さは、`thickness`プロパティではなく後述する`sep`プロパティで指定します。
@@ -145,7 +156,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 #showybox(title: "これはタイトルです", frame: (dash: "dashed"), footer: "これはフッターです")[これは本文です]
 ```
 
-![frame_dash](./images/frame_dash.png)
+
+![frame_dash.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/f6f23d53-0cb0-f004-6a94-392c880b5411.png)
+
 
 指定できる値は
 - **solid**: 実線
@@ -168,7 +181,9 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 #showybox(title: "これはタイトルです", frame: (inset: 20pt, ), footer: "これはフッターです")[これは本文です]
 ```
 
-![frame_inset](./images/frame_inset.png)
+
+![frame_inset.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/1279d330-721c-f9ee-820d-425f19784627.png)
+
 
 値は`relative-length`や`dictionary`の形式で指定できます。`dictionary`の場合は、`top`, `bottom`, `left`, `right`, `x`, `y`, `rest`のプロパティを指定できます。デフォルトの値は`(x: 1em, y: 0.65em)`です。
 
@@ -207,7 +222,8 @@ showybox()[これがshowyboxパッケージの\ 基本的な記述です。]
 ]
 ```
 
-![title_style](./images/title_style.png)
+
+![title_style.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/ce2f29f1-bd0f-7c4f-6484-c6a9b3090a65.png)
 
 ### boxed-style
 このプロパティが`None`でない場合(すなわち辞書型の場合)、タイトルはfloating boxとして、本文の上部に表示されます。詳細は後述します。
@@ -258,7 +274,8 @@ y方向のアンカー:
 ]
 ```
 
-![boxed_style](./images/boxed_style.png)
+
+![boxed_style.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/f70eec77-cd92-194d-ec96-455958329842.png)
 
 ## Body style
 このパラメータには、`showybox` の本文に対して一般的なスタイルのプロパティを設定するのに役立つすべてのオプションが含まれています。
@@ -305,7 +322,9 @@ y方向のアンカー:
 ]
 ```
 
-![footer_style](./images/footer_style.png)
+
+![footer_style.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/4cbc93a5-74ab-3bc8-8fc6-e1da29f2c2c0.png)
+
 
 ## Separator properties (sep) 
 セパレータに関するプロパティを指定します。スパレーターの使い方は後述します。
@@ -347,7 +366,9 @@ y方向のアンカー:
 ]
 ```
 
-![shadow](./images/shadow.png)
+
+![shadow.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/206c7d8e-1977-e093-f8fb-348de46d5522.png)
+
 
 ## Width
 showyboxの幅を指定します。デフォルトは`100%`です。
@@ -376,7 +397,8 @@ showyboxの中に別のshowyboxを入れ子にすることもできます。
 ])
 ```
 
-![encapsulation](./images/encapsulation.png)
+
+![encapsulation.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3748073/877caffb-cf0c-4e2c-5617-035043a0ed23.png)
 
 # まとめ
 今回はshowyboxパッケージの使い方について解説しました。showyboxパッケージを利用することで、式やテキストを装飾することができ、見やすくなるだけでなく、情報を整理しやすくなります。ぜひ、Typstでの執筆時に活用してみてください。
