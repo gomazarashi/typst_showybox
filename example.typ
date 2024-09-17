@@ -94,11 +94,21 @@
   shadow: (color: aqua.lighten(55%), offset: 3pt),
   frame: (title-color: blue.darken(30%), border-color: blue.darken(30%), body-color: aqua.lighten(80%)),
   title: "ガウスの発散定理",
-  title-style: (weight: 600)
+  title-style: (weight: 600),
 )[
   ガウスの発散定理は次のように表される。
   $ integral_S bold(A) dot bold(n) dif S = integral_V nabla dot bold(A) dif V $
 ]
+
+#pagebreak()
+
+= Encapsulation
+#showybox(title: "Parent container", lorem(10), columns(2)[
+  #showybox(title-style: (boxed-style: (:)), title: "Child 1", lorem(10))
+  #colbreak()
+  #showybox(title-style: (boxed-style: (:)), title: "Child 2", lorem(10))
+])
+
 
 
 

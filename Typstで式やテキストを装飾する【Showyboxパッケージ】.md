@@ -348,3 +348,41 @@ y方向のアンカー:
 ```
 
 ![shadow](./images/shadow.png)
+
+## Width
+showyboxの幅を指定します。デフォルトは`100%`です。
+
+## Align　
+showyboxの配置を指定します。デフォルトは`left`です。
+
+## Breakable
+このパラメーターは、showyboxがページまたはコンテナの終端で改行するかどうかを指定します。デフォルトは`false`です。
+
+## Spacing, above, and below
+spacing は、`above` または `below` が指定されていない場合に、showyboxの上下にどれだけのスペースを挿入するかを設定します。デフォルトでは、ドキュメント内のブロックのデフォルトのスペースが適用されます。
+
+# Separators
+同じshowybox内において、コンテンツを2つ以上に分割したい場合、`showybox()`関数の括弧内にコンテンツをコンマで区切って記述するか、閉じ括弧の直後にコンテンツを並べることで実現できます。
+
+# Encapsulation
+showyboxの中に別のshowyboxを入れ子にすることもできます。
+
+```typ
+= Encapsulation
+#showybox(title: "Parent container", lorem(10), columns(2)[
+  #showybox(title-style: (boxed-style: (:)), title: "Child 1", lorem(10))
+  #colbreak()
+  #showybox(title-style: (boxed-style: (:)), title: "Child 2", lorem(10))
+])
+```
+
+![encapsulation](./images/encapsulation.png)
+
+# まとめ
+今回はshowyboxパッケージの使い方について解説しました。showyboxパッケージを利用することで、式やテキストを装飾することができ、見やすくなるだけでなく、情報を整理しやすくなります。ぜひ、Typstでの執筆時に活用してみてください。
+また、誤訳などが含まれている場合はコメント等でご指摘頂けると非常にありがたいです。ここまで読んでいただき、ありがとうございました。
+
+# 参考文献
+- [showybox 2.0.1](https://typst.app/universe/package/showybox/)
+- [Pablo-Gonzalez-Calderon/showybox-package](https://github.com/Pablo-Gonzalez-Calderon/showybox-package)
+- [Showybox's Manual.pdf](https://github.com/Pablo-Gonzalez-Calderon/showybox-package/blob/main/Showybox's%20Manual.pdf)
